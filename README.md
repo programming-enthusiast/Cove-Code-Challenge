@@ -22,6 +22,9 @@ The data returned will be an array of reservation objects in the following forma
 ```
 
 ## Design
+![Home](https://github.com/programming-enthusiast/Cove-Code-Challenge/blob/main/design/home.png)
+![Monthly Schedule](https://github.com/programming-enthusiast/Cove-Code-Challenge/blob/main/design/monthly.png)
+![Daily Schedule](https://github.com/programming-enthusiast/Cove-Code-Challenge/blob/main/design/daily.png)
 
 ## Project Structure
 
