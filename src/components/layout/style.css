@@ -1,0 +1,32 @@
+.app-layout__container {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar__container {
+  width: 100px;
+  height: 100%;
+  background: rgb(0, 107, 179);
+}
+
+.sidebar__item-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+
+.sidebar__item-icon {
+  width: 36px;
+  height: 36px;
+  margin: auto;
+}
+
+.app-layout__page-container {
+  width: 100%;
+  height: 100%;
+}
