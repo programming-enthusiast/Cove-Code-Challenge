@@ -22,3 +22,27 @@ The data returned will be an array of reservation objects in the following forma
 ```
 
 ## Design
+
+## Project Structure
+
+    src
+    ├── assets                   # asset files
+    ├── components               # React components used in this project
+    ├── contexts                 # contexts and context providers
+    ├── pages                    # pages (home, monthly_schedule, daily_schedule)
+
+## Functions
+- Users can view reservations by room or month or day.
+- Users can select the room to view reservations.
+- Users can view reservations on a monthly calendar.
+- Users can view reservations on a daily calendar.
+
+## How to run 
+```
+$ git clone https://github.com/programming-enthusiast/Cove-Code-Challenge
+$ yarn install
+$ yarn start
+```
+You can now access http://localhost:3000.
+
+    
