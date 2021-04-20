@@ -18,6 +18,11 @@
   flex-direction: column;
   padding: 10px;
   color: white;
+  cursor: pointer;
+}
+
+.sidebar__item-container.selected {
+  background:rgb(50, 157, 229)
 }
 
 .sidebar__item-icon {
