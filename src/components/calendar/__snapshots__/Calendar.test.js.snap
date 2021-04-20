@@ -32,152 +32,48 @@ exports[`Calendar Component should render correctly 1`] = `
   >
     <div
       className="calendar-days-of-week"
-      style={
-        Object {
-          "display": "flex",
-          "flexDirection": "row",
-        }
-      }
     >
       <div
-        style={
-          Object {
-            "flex": "1",
-          }
-        }
+        className="calendar-day-of-week"
       >
-        <div
-          className="calendar-day-of-week"
-          style={
-            Object {
-              "border": "1px solid black",
-              "textAlign": "center",
-            }
-          }
-        >
-          Mon
-        </div>
+        Sun
       </div>
       <div
-        style={
-          Object {
-            "flex": "1",
-          }
-        }
+        className="calendar-day-of-week"
       >
-        <div
-          className="calendar-day-of-week"
-          style={
-            Object {
-              "border": "1px solid black",
-              "textAlign": "center",
-            }
-          }
-        >
-          Tue
-        </div>
+        Mon
       </div>
       <div
-        style={
-          Object {
-            "flex": "1",
-          }
-        }
+        className="calendar-day-of-week"
       >
-        <div
-          className="calendar-day-of-week"
-          style={
-            Object {
-              "border": "1px solid black",
-              "textAlign": "center",
-            }
-          }
-        >
-          Wed
-        </div>
+        Tue
       </div>
       <div
-        style={
-          Object {
-            "flex": "1",
-          }
-        }
+        className="calendar-day-of-week"
       >
-        <div
-          className="calendar-day-of-week"
-          style={
-            Object {
-              "border": "1px solid black",
-              "textAlign": "center",
-            }
-          }
-        >
-          Thu
-        </div>
+        Wed
       </div>
       <div
-        style={
-          Object {
-            "flex": "1",
-          }
-        }
+        className="calendar-day-of-week"
       >
-        <div
-          className="calendar-day-of-week"
-          style={
-            Object {
-              "border": "1px solid black",
-              "textAlign": "center",
-            }
-          }
-        >
-          Fri
-        </div>
+        Thu
       </div>
       <div
-        style={
-          Object {
-            "flex": "1",
-          }
-        }
+        className="calendar-day-of-week"
       >
-        <div
-          className="calendar-day-of-week"
-          style={
-            Object {
-              "border": "1px solid black",
-              "textAlign": "center",
-            }
-          }
-        >
-          Sat
-        </div>
+        Fri
       </div>
       <div
-        style={
-          Object {
-            "flex": "1",
-          }
-        }
+        className="calendar-day-of-week"
       >
-        <div
-          className="calendar-day-of-week"
-          style={
-            Object {
-              "border": "1px solid black",
-              "textAlign": "center",
-            }
-          }
-        >
-          Sun
-        </div>
+        Sat
       </div>
     </div>
     <div
       className="calendar__week_container"
     >
       <div
-        className="calendar__day_container sunday null"
+        className="calendar__day_container sunday "
         onClick={[Function]}
       >
         <span
@@ -193,7 +89,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -209,7 +105,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -225,7 +121,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -241,7 +137,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -257,7 +153,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -273,7 +169,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null saturday"
+        className="calendar__day_container  saturday"
         onClick={[Function]}
       >
         <span
@@ -293,7 +189,7 @@ exports[`Calendar Component should render correctly 1`] = `
       className="calendar__week_container"
     >
       <div
-        className="calendar__day_container sunday null"
+        className="calendar__day_container sunday "
         onClick={[Function]}
       >
         <span
@@ -309,7 +205,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -325,7 +221,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -341,7 +237,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -357,7 +253,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -373,7 +269,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -389,7 +285,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null saturday"
+        className="calendar__day_container  saturday"
         onClick={[Function]}
       >
         <span
@@ -409,7 +305,7 @@ exports[`Calendar Component should render correctly 1`] = `
       className="calendar__week_container"
     >
       <div
-        className="calendar__day_container sunday null"
+        className="calendar__day_container sunday "
         onClick={[Function]}
       >
         <span
@@ -425,7 +321,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -441,7 +337,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -457,7 +353,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -473,7 +369,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -489,7 +385,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -505,7 +401,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null saturday"
+        className="calendar__day_container  saturday"
         onClick={[Function]}
       >
         <span
@@ -525,7 +421,7 @@ exports[`Calendar Component should render correctly 1`] = `
       className="calendar__week_container"
     >
       <div
-        className="calendar__day_container sunday null"
+        className="calendar__day_container sunday "
         onClick={[Function]}
       >
         <span
@@ -541,7 +437,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -557,7 +453,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -573,7 +469,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -589,7 +485,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -605,7 +501,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -621,7 +517,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null saturday"
+        className="calendar__day_container  saturday"
         onClick={[Function]}
       >
         <span
@@ -641,7 +537,7 @@ exports[`Calendar Component should render correctly 1`] = `
       className="calendar__week_container"
     >
       <div
-        className="calendar__day_container sunday null"
+        className="calendar__day_container sunday "
         onClick={[Function]}
       >
         <span
@@ -657,7 +553,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -673,7 +569,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -689,7 +585,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -705,7 +601,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -721,7 +617,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null null"
+        className="calendar__day_container  "
         onClick={[Function]}
       >
         <span
@@ -737,7 +633,7 @@ exports[`Calendar Component should render correctly 1`] = `
         <div />
       </div>
       <div
-        className="calendar__day_container null saturday"
+        className="calendar__day_container  saturday"
         onClick={[Function]}
       >
         <span
