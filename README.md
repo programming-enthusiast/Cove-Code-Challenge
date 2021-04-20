@@ -48,4 +48,12 @@ $ yarn start
 ```
 You can now access http://localhost:3000.
 
+## How to test this project
+
+I introduced the snapshot testing method for this project. Snapshot tests are very useful when we want to make sure the UI does not change unexpectedly. A typical snapshot test case renders a UI component, takes a snapshot, then compares it to a reference snapshot file stored alongside the test. The test will fail if the two snapshots do not match. Either the change is unexpected, or the reference snapshot needs to be updated to the new version of the UI component.
+```
+$ yarn test
+```
+
+
     
