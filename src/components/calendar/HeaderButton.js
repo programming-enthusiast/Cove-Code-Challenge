@@ -9,7 +9,7 @@ export default function HeaderButton({
     <button
       className="calendar__header-button"
       disabled={!enabled}
-      onClick={(e) => { arrow === "<" ? onActiveMonthChange(-1) : onActiveMonthChange(1); }}
+      onClick={(e) => { arrow === "<" ? onActiveMonthChange(-1) : onActiveMonthChange(1) }}
     >
       {arrow}
     </button>

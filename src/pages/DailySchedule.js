@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext } from 'react'
 import { useParams } from 'react-router'
-import Paper from '@material-ui/core/Paper';
-import { ViewState } from '@devexpress/dx-react-scheduler';
+import Paper from '@material-ui/core/Paper'
+import { ViewState } from '@devexpress/dx-react-scheduler'
 import {
   Scheduler,
   DayView,
   Appointments
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@devexpress/dx-react-scheduler-material-ui'
 import ScheduleDataContext from '../contexts/ScheduleDataContext'
 import formatDate from 'date-fns/format'
 import isSameDay from "date-fns/is_same_day"

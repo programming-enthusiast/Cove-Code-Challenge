@@ -12,7 +12,7 @@ const roomList = ROOM_LIST
 const schedulesPerPage = 9
 
 export default function RoomsList() {
-  const history = useHistory();
+  const history = useHistory()
   const [currentPage, setCurrentPage] = useState(1)
   const { setCurrentRoomId } = useContext(ScheduleDataContext)
 
@@ -62,17 +62,17 @@ export default function RoomsList() {
           roomList.map((room, index) => {
             if (index >= (currentPage - 1) * schedulesPerPage && index < currentPage * schedulesPerPage) {
               return (
-                  <div className="room-list__listing-card" onClick={() => handleRoomClick(room.id)}>
-                    <div className="room-list__listing-card__img-aspect-ratio-box">
-                      <img className="room-list__listing-card__image" src={room.imageUrl} />
-                    </div>
-                    <div className="room-list__listing-card-info-section">
-                      <div className="room-list__listing-card-info-section__room-name">
-                        {room.name}
-                      </div>
+                <div className="room-list__listing-card" onClick={() => handleRoomClick(room.id)}>
+                  <div className="room-list__listing-card__img-aspect-ratio-box">
+                    <img className="room-list__listing-card__image" src={room.imageUrl} />
+                  </div>
+                  <div className="room-list__listing-card-info-section">
+                    <div className="room-list__listing-card-info-section__room-name">
+                      {room.name}
                     </div>
                   </div>
-                ) 
+                </div>
+              ) 
             }
           })
         }

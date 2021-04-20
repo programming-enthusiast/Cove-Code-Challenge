@@ -28,5 +28,5 @@ export default function Month({ activeMonth, onDayClick }) {
         ))
       }
     </div>
-  );
+  )
 }

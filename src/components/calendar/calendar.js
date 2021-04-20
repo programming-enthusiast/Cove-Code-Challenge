@@ -17,13 +17,13 @@ export default function Calendar({ onDayClick, onChange, onActiveMonthChange }) 
   }
 
   return (
-      <div className="calendar_container">      
-        <MonthHeader
-          activeMonth={activeMonth} 
-          onActiveMonthChange={handleActiveMonthChange}
-        />
-        <Month activeMonth={activeMonth} onDayClick={onDayClick}/>
+    <div className="calendar_container">      
+      <MonthHeader
+        activeMonth={activeMonth} 
+        onActiveMonthChange={handleActiveMonthChange}
+      />
+      <Month activeMonth={activeMonth} onDayClick={onDayClick}/>
       
-      </div>
+    </div>
   )
 }
