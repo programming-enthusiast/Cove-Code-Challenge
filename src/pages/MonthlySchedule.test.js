@@ -1,10 +1,10 @@
 import React from "react"
-import App from "./App"
-import ScheduleDataContext from "./contexts/ScheduleDataContext"
+import MonthlySchedule from "./MonthlySchedule"
+import ScheduleDataContext from "../contexts/ScheduleDataContext"
 import renderer from "react-test-renderer"
-import { ROOM_LIST, SCHEDULE_DATA } from './const'
+import { ROOM_LIST, SCHEDULE_DATA } from '../const'
 
-describe("App Component", () => {
+describe("MonthlySchedule Component", () => {
   let renderedComponent
 
   let contextValue = { scheduleData: SCHEDULE_DATA, roomList: ROOM_LIST}
@@ -12,7 +12,7 @@ describe("App Component", () => {
   beforeAll(() => {
     renderedComponent = renderer.create(
       <ScheduleDataContext.Provider value={contextValue}>
-        <App/>
+        <MonthlySchedule/>
       </ScheduleDataContext.Provider>
       )
   })

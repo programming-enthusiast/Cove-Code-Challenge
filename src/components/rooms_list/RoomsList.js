@@ -5,18 +5,17 @@ import { ReactComponent as PrevBtn} from '../../assets/svg/prev_btn.svg'
 import { ReactComponent as NextBtn} from '../../assets/svg/next_btn.svg'
 import ScheduleDataContext from '../../contexts/ScheduleDataContext'
 import moment from 'moment'
-import { ROOM_LIST } from '../../const'
 
-const roomList = ROOM_LIST
 
 const schedulesPerPage = 9
 
 export default function RoomsList() {
   const history = useHistory()
   const [currentPage, setCurrentPage] = useState(1)
-  const { setCurrentRoomId } = useContext(ScheduleDataContext)
+  const { roomList, setCurrentRoomId } = useContext(ScheduleDataContext)
 
-  const pageCount = Math.ceil(roomList.length / 9.0)
+
+  const pageCount = roomList ? Math.ceil(roomList.length / 9.0) : 0
   
 
   const handlePageNumberClick = (pageNum) => {
@@ -37,11 +36,11 @@ export default function RoomsList() {
     const pageNumbers = []
     for (let i = 1; i <= pageCount; i++ ) {
       if (i === currentPage) {
-        pageNumbers.push(<div className="room-list__page-stepper__page selected">
+        pageNumbers.push(<div className="room-list__page-stepper__page selected" key={i}>
           {i}
         </div>)
       } else {
-        pageNumbers.push(<div className="room-list__page-stepper__page" onClick={() => handlePageNumberClick(i)}>
+        pageNumbers.push(<div className="room-list__page-stepper__page" onClick={() => handlePageNumberClick(i)} key={i}>
           {i}
         </div>)
       }
@@ -62,7 +61,7 @@ export default function RoomsList() {
           roomList.map((room, index) => {
             if (index >= (currentPage - 1) * schedulesPerPage && index < currentPage * schedulesPerPage) {
               return (
-                <div className="room-list__listing-card" onClick={() => handleRoomClick(room.id)}>
+                <div className="room-list__listing-card" onClick={() => handleRoomClick(room.id)} key={room.id}>
                   <div className="room-list__listing-card__img-aspect-ratio-box">
                     <img className="room-list__listing-card__image" src={room.imageUrl} />
                   </div>
@@ -78,7 +77,7 @@ export default function RoomsList() {
         }
       </div>
       <div className="room-list__page-stepper__wrapper">
-        <div className="room-list__page-stepper__container">
+        <div className="room-list__page-stepper__container" key="stepper__container">
           <div className="room-list__page-stepper__previous-btn" onClick={handlePrevPageClick}>
             <PrevBtn fill={currentPage === 1 ? "rgb(226, 226, 226)": "black"}/>
           </div>

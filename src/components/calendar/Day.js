@@ -34,9 +34,9 @@ export default function Day({ date, onDayClick}) {
       </span>
       <div>
         {
-          filteredSchedules.map((schedule) => {
+          filteredSchedules.map((schedule, index) => {
             return (
-              <div>
+              <div key={index}>
                 {formatDate(parseDate(schedule.start), 'hh:mm')} ~ {formatDate(parseDate(schedule.end), 'hh:mm')}
               </div>
             )

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppLayout Component should render correctly 1`] = `
+<div
+  className="app-layout__container"
+>
+  <div
+    className="sidebar__container"
+  >
+    <div
+      className="sidebar__item-container selected"
+      onClick={[Function]}
+    >
+      <div
+        className="sidebar__item-icon"
+      >
+        <svg
+          fill="white"
+        >
+          rooms.svg
+        </svg>
+      </div>
+      <div>
+        Rooms
+      </div>
+    </div>
+    <div
+      className="sidebar__item-container "
+      onClick={[Function]}
+    >
+      <div
+        className="sidebar__item-icon"
+      >
+        <svg
+          fill="white"
+        >
+          monthly_schedule.svg
+        </svg>
+      </div>
+      <div>
+        Monthly Schedule
+      </div>
+    </div>
+    <div
+      className="sidebar__item-container "
+      onClick={[Function]}
+    >
+      <div
+        className="sidebar__item-icon"
+      >
+        <svg
+          fill="white"
+        >
+          daily_schedule.svg
+        </svg>
+      </div>
+      <div>
+        Daily Schedule
+      </div>
+    </div>
+  </div>
+  <div
+    className="app-layout__page-container"
+  />
+</div>
+`;

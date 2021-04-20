@@ -19,6 +19,7 @@
   padding: 10px;
   color: white;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .sidebar__item-container.selected {
@@ -29,6 +30,7 @@
   width: 36px;
   height: 36px;
   margin: auto;
+  margin-bottom: 5px;
 }
 
 .app-layout__page-container {

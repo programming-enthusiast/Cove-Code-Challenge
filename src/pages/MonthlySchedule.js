@@ -1,7 +1,7 @@
 import './style.css'
 import React, { useContext } from 'react'
 
-import Calendar from '../components/calendar/calendar'
+import Calendar from '../components/calendar/Calendar'
 import ScheduleDataContext from '../contexts/ScheduleDataContext'
 import { getRoomName } from '../const'
 

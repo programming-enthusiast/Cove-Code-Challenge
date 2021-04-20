@@ -1,5 +1,5 @@
 import './style.css'
-import { useState, useEffect, useContext } from "react"
+import { useState } from "react"
 import addMonths from "date-fns/add_months"
 
 import MonthHeader from "./MonthHeader"
@@ -7,10 +7,9 @@ import Month from "./Month"
 
 
 
-export default function Calendar({ onDayClick, onChange, onActiveMonthChange }) {
+export default function Calendar({ onDayClick }) {
 
   const [activeMonth, setActiveMonth] = useState(new Date())
-  const [calendarMonth, setCalendarMonth] = useState([])
 
   const handleActiveMonthChange = (offset) => {
     setActiveMonth(addMonths(activeMonth, offset))

@@ -23,7 +23,7 @@ export default function DaysOfWeek() {
     >
       {
         DAYS_OF_WEEK.map(day => 
-          (<DayOfWeek day={day}/>)
+          (<DayOfWeek day={day} key={day}/>)
         )
       }
     </div>

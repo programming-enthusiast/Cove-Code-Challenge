@@ -12,10 +12,21 @@ import { API_URL } from './const'
 
 function App() {
 
-  const { scheduleData, setScheduleData, currentRoomId } = useContext(ScheduleDataContext)
+  const { setScheduleData, setRoomList, currentRoomId } = useContext(ScheduleDataContext)
 
   useEffect(() => {
     Axios.get(API_URL).then((response) => {
+      const roomList = []
+      response.data.map((schedule) => {
+        const sameRooms = roomList.filter((room) => {
+          if (room.id === schedule.room.id)
+            return room
+        })
+        if (!sameRooms.length) {
+          roomList.push(schedule.room)
+        }
+      })
+      setRoomList(roomList)
       setScheduleData(response.data)
     })
   }, [])

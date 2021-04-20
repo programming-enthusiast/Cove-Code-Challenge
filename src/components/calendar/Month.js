@@ -23,8 +23,8 @@ export default function Month({ activeMonth, onDayClick }) {
     <div className="calendar_grid_container">
       <DaysOfWeek/>
       {
-        weeks.map(week => (
-          <Week date={week} onDayClick={onDayClick} activeMonth={activeMonth}/>
+        weeks.map((week, index) => (
+          <Week date={week} onDayClick={onDayClick} activeMonth={activeMonth} key={index}/>
         ))
       }
     </div>

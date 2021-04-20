@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component should render correctly 1`] = `
+<div
+  className="page-container"
+>
+  <div
+    className="room-list__container"
+  >
+    <div
+      className="room-list__title"
+    >
+      <h1>
+        Select a room to view reservations
+      </h1>
+    </div>
+    <div
+      className="room-list__grid_view"
+    >
+      <div
+        className="room-list__listing-card"
+        onClick={[Function]}
+      >
+        <div
+          className="room-list__listing-card__img-aspect-ratio-box"
+        >
+          <img
+            className="room-list__listing-card__image"
+            src="https://staging.cove.is/parse/files/hRKEvW2lN74k5nCg6p2XtmiWRNHycE2pHpXpELMX/f96efd3f11aadb34135bb1f0aecf9667_Quincy%20Room.jpg"
+          />
+        </div>
+        <div
+          className="room-list__listing-card-info-section"
+        >
+          <div
+            className="room-list__listing-card-info-section__room-name"
+          >
+            Room A
+          </div>
+        </div>
+      </div>
+      <div
+        className="room-list__listing-card"
+        onClick={[Function]}
+      >
+        <div
+          className="room-list__listing-card__img-aspect-ratio-box"
+        >
+          <img
+            className="room-list__listing-card__image"
+            src="https://staging.cove.is/parse/files/hRKEvW2lN74k5nCg6p2XtmiWRNHycE2pHpXpELMX/d0d19da4aa88734291279f5fe7a836e7_Wakefield%20Room.jpg"
+          />
+        </div>
+        <div
+          className="room-list__listing-card-info-section"
+        >
+          <div
+            className="room-list__listing-card-info-section__room-name"
+          >
+            Room B
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="room-list__page-stepper__wrapper"
+    >
+      <div
+        className="room-list__page-stepper__container"
+      >
+        <div
+          className="room-list__page-stepper__previous-btn"
+          onClick={[Function]}
+        >
+          <svg
+            fill="rgb(226, 226, 226)"
+          >
+            prev_btn.svg
+          </svg>
+        </div>
+        <div
+          className="room-list__page-stepper__spacer"
+        />
+        <div
+          className="room-list__page-stepper__page selected"
+        >
+          1
+        </div>
+        <div
+          className="room-list__page-stepper__spacer"
+        />
+        <div
+          className="room-list__page-stepper__next-btn"
+          onClick={[Function]}
+        >
+          <svg
+            fill="rgb(226, 226, 226)"
+          >
+            next_btn.svg
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

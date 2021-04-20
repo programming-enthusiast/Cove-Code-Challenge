@@ -14,10 +14,11 @@ export default function Week({ date, onDayClick }) {
   return (
     <div className="calendar__week_container">
       {
-        eachDay(start, end).map((day) => {
+        eachDay(start, end).map((day, index) => {
           return <Day 
             date={day} 
             onDayClick={onDayClick} 
+            key={day.toString()}
           />
         })
       }
