@@ -1,16 +1,9 @@
 import React from "react"
 
-export default function DayOfWeek({ className, day }) {
+export default function DayOfWeek({ day }) {
   return (
-    <div className={className} style={{flex: "1"}}>
-      <div className="calendar-day-of-week"
-        style={{
-          border: "1px solid black",
-          textAlign: "center"
-        }}
-      >
-        {day}
-      </div>
+    <div className="calendar-day-of-week">
+      {day}
     </div>
   )
 }

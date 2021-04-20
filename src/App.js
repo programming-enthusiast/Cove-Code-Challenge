@@ -27,7 +27,7 @@ function App() {
         }
       })
       setRoomList(roomList)
-      setScheduleData(response.data)
+      setScheduleData([...response.data])
     })
   }, [])
 

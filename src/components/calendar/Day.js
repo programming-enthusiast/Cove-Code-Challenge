@@ -28,7 +28,7 @@ export default function Day({ date, onDayClick}) {
   }
 
   return (
-    <div className={`calendar__day_container ${isSunday(date) ? "sunday" : null} ${isSaturday(date) ? "saturday" : null}`} onClick={handleDayClick}>
+    <div className={`calendar__day_container ${isSunday(date) ? "sunday" : ''} ${isSaturday(date) ? "saturday" : ''}`} onClick={handleDayClick}>
       <span style={{font: "bold", fontSize: "20px"}}>
         {formatDate(date, "D")}
       </span>
