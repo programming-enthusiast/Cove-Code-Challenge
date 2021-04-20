@@ -23,6 +23,10 @@
   border-bottom-right-radius: 8px;
 }
 
+.room-list__listing-card:hover {
+  cursor: pointer;
+}
+
 .room-list__listing-card__img-aspect-ratio-box {
   position: relative;
 }

@@ -1,27 +1,20 @@
 import './style.css'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { useHistory } from "react-router-dom"
 import { ReactComponent as PrevBtn} from '../../assets/svg/prev_btn.svg'
 import { ReactComponent as NextBtn} from '../../assets/svg/next_btn.svg'
+import ScheduleDataContext from '../../contexts/ScheduleDataContext'
 import moment from 'moment'
+import { ROOM_LIST } from '../../const'
 
-const roomList = [
-  {
-    "id":"401662b9-b110-4159-a4f2-ebd955f3b1f4",
-    "name":"Room A",
-    "imageUrl":"https://staging.cove.is/parse/files/hRKEvW2lN74k5nCg6p2XtmiWRNHycE2pHpXpELMX/f96efd3f11aadb34135bb1f0aecf9667_Quincy%20Room.jpg"
-  },
-  {
-    "id": "70866847-3a55-407e-9973-841ac4c16a29",
-    "name":"Room B",
-    "imageUrl":"https://staging.cove.is/parse/files/hRKEvW2lN74k5nCg6p2XtmiWRNHycE2pHpXpELMX/d0d19da4aa88734291279f5fe7a836e7_Wakefield%20Room.jpg"
-  },
-]
+const roomList = ROOM_LIST
 
 const schedulesPerPage = 9
 
 export default function RoomsList() {
-
+  const history = useHistory();
   const [currentPage, setCurrentPage] = useState(1)
+  const { setCurrentRoomId } = useContext(ScheduleDataContext)
 
   const pageCount = Math.ceil(roomList.length / 9.0)
   
@@ -55,22 +48,27 @@ export default function RoomsList() {
     }
     return pageNumbers
   }
+
+  const handleRoomClick = (roomId) => {
+    setCurrentRoomId(roomId)
+    history.push('/monthly_schedule')
+  }
   
   return (
     <div className="room-list__container">
-      <div className="room-list__title"><h1>Rooms</h1></div>
+      <div className="room-list__title"><h1>Select a room to view reservations</h1></div>
       <div className="room-list__grid_view">
         {
-          roomList.map((schedule, index) => {
+          roomList.map((room, index) => {
             if (index >= (currentPage - 1) * schedulesPerPage && index < currentPage * schedulesPerPage) {
               return (
-                  <div className="room-list__listing-card">
+                  <div className="room-list__listing-card" onClick={() => handleRoomClick(room.id)}>
                     <div className="room-list__listing-card__img-aspect-ratio-box">
-                      <img className="room-list__listing-card__image" src={schedule.imageUrl} />
+                      <img className="room-list__listing-card__image" src={room.imageUrl} />
                     </div>
                     <div className="room-list__listing-card-info-section">
                       <div className="room-list__listing-card-info-section__room-name">
-                        {schedule.name}
+                        {room.name}
                       </div>
                     </div>
                   </div>

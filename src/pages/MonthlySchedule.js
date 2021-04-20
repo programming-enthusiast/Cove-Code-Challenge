@@ -1,12 +1,16 @@
 import './style.css'
-import React from 'react'
+import React, { useContext } from 'react'
 
-import RoomsList from '../components/rooms_list/RoomsList'
 import Calendar from '../components/calendar/calendar'
+import ScheduleDataContext from '../contexts/ScheduleDataContext'
+import { getRoomName } from '../const'
 
 export default function MonthlySchedulePage() {
+  const { currentRoomId } = useContext(ScheduleDataContext)
+  document.title = getRoomName(currentRoomId) + ' - Monthly Calendar'
   return (
     <div className="page-container">
+      <h1>{document.title}</h1>
       <Calendar/>
     </div>
   )
