@@ -7,22 +7,19 @@ import Month from "./Month"
 
 
 
-export default function Calendar({ onDayClick }) {
-
-  const [activeMonth, setActiveMonth] = useState(new Date())
+export default function Calendar({ month, onMonthChange, onDayClick }) {
 
   const handleActiveMonthChange = (offset) => {
-    setActiveMonth(addMonths(activeMonth, offset))
+    onMonthChange(addMonths(month, offset))
   }
 
   return (
     <div className="calendar_container">      
       <MonthHeader
-        activeMonth={activeMonth} 
+        activeMonth={month} 
         onActiveMonthChange={handleActiveMonthChange}
       />
-      <Month activeMonth={activeMonth} onDayClick={onDayClick}/>
-      
+      <Month activeMonth={month} onDayClick={onDayClick}/>
     </div>
   )
 }

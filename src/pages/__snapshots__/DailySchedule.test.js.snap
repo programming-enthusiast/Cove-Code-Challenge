@@ -54,12 +54,12 @@ exports[`DailySchedule Component should render correctly 1`] = `
                           className="Cell-dayView-23"
                         >
                           <p
-                            className="Cell-dayOfWeek-20 Cell-highlightedText-22"
+                            className="Cell-dayOfWeek-20"
                           >
                             Tue
                           </p>
                           <div
-                            className="Cell-dayOfMonth-21 Cell-highlightedText-22"
+                            className="Cell-dayOfMonth-21"
                           >
                             20
                           </div>

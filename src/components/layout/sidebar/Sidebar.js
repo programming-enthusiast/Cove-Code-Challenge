@@ -26,7 +26,7 @@ export default function Sidebar() {
         <div className="sidebar__item-icon"><RoomsIcon fill="white"/></div>
         <div>Rooms</div>
       </div>
-      <div className={`sidebar__item-container ${location.pathname === '/monthly_schedule' ? 'selected' : ''}`} onClick={handleMonthlyScheduleClick}>
+      <div className={`sidebar__item-container ${location.pathname.includes('/monthly_schedule') ? 'selected' : ''}`} onClick={handleMonthlyScheduleClick}>
         <div className="sidebar__item-icon"><MonthlyScheduleIcon fill="white"/></div>
         <div>Monthly Schedule</div>
       </div>

@@ -15,6 +15,9 @@ function App() {
   const { setScheduleData, setRoomList, currentRoomId, setCurrentRoomId } = useContext(ScheduleDataContext)
 
   useEffect(() => {
+    if (localStorage.getItem('roomId')) {
+      setCurrentRoomId(localStorage.getItem('roomId'))
+    }
     Axios.get(API_URL).then((response) => {
       const roomList = []
       response.data.map((schedule) => {
@@ -28,9 +31,6 @@ function App() {
       })
       setRoomList(roomList)
       setScheduleData([...response.data])
-      if (localStorage.getItem('roomId')) {
-        setCurrentRoomId(localStorage.getItem('roomId'))
-      }
     })
   }, [])
 
@@ -45,8 +45,11 @@ function App() {
               <HomePage/>
             </Route>
             <Route exact path="/monthly_schedule">
+              <Redirect to={`/monthly_schedule/${formatDate(new Date(), 'YYYY-MM')}`} />
+            </Route>
+            <Route exact path="/monthly_schedule/:date">
               {
-                currentRoomId ? <MonthlySchedulePage/> : <Redirect to="/"/>
+                roomId ? <MonthlySchedulePage/> : <Redirect to="/"/>
               }
             </Route>
             <Route exact path="/daily_schedule">
