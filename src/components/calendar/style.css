@@ -64,6 +64,7 @@
   border: none;
   font-size: 20px;
   background: white;
+  cursor: pointer;
 }
 
 .calendar__week_container {
