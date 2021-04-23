@@ -24,7 +24,7 @@ export default function Day({ date, onDayClick}) {
 
   const handleDayClick = () => {
     const dateParam = formatDate(date, "YYYY-MM-DD")
-    history.push('/daily_schedule/' + dateParam)
+    history.push(`/daily_schedule/${currentRoomId}/${dateParam}`)
   }
 
   return (

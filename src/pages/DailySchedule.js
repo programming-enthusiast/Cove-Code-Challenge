@@ -18,14 +18,14 @@ import { getRoomName } from '../const'
 
 export default function DailySchedule({ props }) {
   
-  const { date } = useParams()
-  const { scheduleData, currentRoomId } = useContext(ScheduleDataContext)
+  const { roomId, date } = useParams()
+  const { scheduleData } = useContext(ScheduleDataContext)
 
   const schedulerData = []
 
   scheduleData.filter((schedule) => {
     const scheduleDate = parseDate(schedule.start)
-    if (isSameDay(scheduleDate, date) && isSameMonth(scheduleDate, date) && isSameYear(scheduleDate, date) && schedule.room.id === currentRoomId) {
+    if (isSameDay(scheduleDate, date) && isSameMonth(scheduleDate, date) && isSameYear(scheduleDate, date) && schedule.room.id === roomId) {
       schedulerData.push({
         startDate: formatDate(parseDate(schedule.start), 'YYYY-MM-DDThh:mm'),
         endDate: formatDate(parseDate(schedule.end), 'YYYY-MM-DDThh:mm'),
@@ -38,7 +38,7 @@ export default function DailySchedule({ props }) {
     date = formatDate(new Date(), 'YYYY-MM-DD')
   }
 
-  document.title = getRoomName(currentRoomId) + ' - Daily Calendar'
+  document.title = getRoomName(roomId) + ' - Daily Calendar'
   return (
     <div className="page-container">
       <Paper>

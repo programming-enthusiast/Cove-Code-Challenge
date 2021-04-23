@@ -12,7 +12,7 @@ import { API_URL } from './const'
 
 function App() {
 
-  const { setScheduleData, setRoomList, currentRoomId } = useContext(ScheduleDataContext)
+  const { setScheduleData, setRoomList, currentRoomId, setCurrentRoomId } = useContext(ScheduleDataContext)
 
   useEffect(() => {
     Axios.get(API_URL).then((response) => {
@@ -28,8 +28,13 @@ function App() {
       })
       setRoomList(roomList)
       setScheduleData([...response.data])
+      if (localStorage.getItem('roomId')) {
+        setCurrentRoomId(localStorage.getItem('roomId'))
+      }
     })
   }, [])
+
+  const roomId = currentRoomId ? currentRoomId : localStorage.getItem('roomId')
 
   return (
     <BrowserRouter>
@@ -46,12 +51,12 @@ function App() {
             </Route>
             <Route exact path="/daily_schedule">
               {
-                <Redirect to={"/daily_schedule/" + formatDate(new Date(), 'YYYY-MM-DD')}/>
+                <Redirect to={"/daily_schedule/" + roomId + "/" + formatDate(new Date(), 'YYYY-MM-DD')}/>
               }
             </Route>
-            <Route exact path="/daily_schedule/:date">
+            <Route exact path="/daily_schedule/:roomId/:date">
               {
-                currentRoomId ? <DailySchedulePage/> : <Redirect to="/"/>
+                roomId ? <DailySchedulePage/> : <Redirect to="/"/>
               }
             </Route>
           </Switch>
