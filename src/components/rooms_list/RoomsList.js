@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react'
 import { useHistory } from "react-router-dom"
 import ScheduleDataContext from '../../contexts/ScheduleDataContext'
 import PageNavigator from './PageNavigator'
+import ListingCard from './ListingCard'
 import moment from 'moment'
 
 
@@ -32,16 +33,7 @@ export default function RoomsList() {
           roomList.map((room, index) => {
             if (index >= (currentPageNumber - 1) * roomsPerPage && index < currentPageNumber * roomsPerPage) {
               return (
-                <div className="room-list__listing-card" onClick={() => handleRoomClick(room.id)} key={room.id}>
-                  <div className="room-list__listing-card__img-aspect-ratio-box">
-                    <img className="room-list__listing-card__image" src={room.imageUrl} />
-                  </div>
-                  <div className="room-list__listing-card-info-section">
-                    <div className="room-list__listing-card-info-section__room-name">
-                      {room.name}
-                    </div>
-                  </div>
-                </div>
+                <ListingCard name={room.name} imageUrl={room.imageUrl} onClick={() => handleRoomClick(room.id)} key={room.id} />
               ) 
             }
           })
