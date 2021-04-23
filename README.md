@@ -22,6 +22,9 @@ The data returned will be an array of reservation objects in the following forma
 ```
 
 ## Design
+
+These sketch images are designed with the focus on the usability and user experience of the app. The css styles are still not pretty good, but I tried to give users a good usability and user experience in the app.
+
 ![Home](https://github.com/programming-enthusiast/Cove-Code-Challenge/blob/main/design/home.png)
 ![Monthly Schedule](https://github.com/programming-enthusiast/Cove-Code-Challenge/blob/main/design/monthly.png)
 ![Daily Schedule](https://github.com/programming-enthusiast/Cove-Code-Challenge/blob/main/design/daily.png)
